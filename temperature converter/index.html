@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A temperature converter to convert Celsius, Fahrenheit and Kelvin.">
+
+  <title>Tempora | Temperature Converter</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <a href="#" class="logo">Tempora<span>.</span></a>
+    <span class="nav-label">TEMPERATURE CONVERTER</span>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="hero-content">
+      <span class="eyebrow">SMART • SIMPLE • INSTANT</span>
+      <h1>Temperature<br><span>Made Simple.</span></h1>
+      <p>
+        Convert temperatures between Celsius, Fahrenheit, and Kelvin
+        with a simple tool designed for quick and accurate results.
+      </p>
+
+      <a href="#converter" class="btn">Try Converter ↓</a>
+    </div>
+
+    <div class="hero-visual" aria-hidden="true">
+      <div class="orbit orbit-one"></div>
+      <div class="orbit orbit-two"></div>
+      <div class="thermometer">🌡️</div>
+      <span class="temp-label label-one">°C</span>
+      <span class="temp-label label-two">°F</span>
+      <span class="temp-label label-three">K</span>
+    </div>
+  </header>
+
+  <!-- Converter -->
+  <main>
+    <section class="converter-section" id="converter">
+      <div class="section-heading">
+        <span class="eyebrow">THE CONVERTER</span>
+        <h2>Convert in <span>Seconds.</span></h2>
+        <p>Enter a temperature, choose its unit, and get the results.</p>
+      </div>
+
+      <div class="converter-card">
+        <form id="converter-form">
+          <label for="temperature">Enter Temperature</label>
+
+          <input
+            type="number"
+            id="temperature"
+            placeholder="e.g. 25"
+            step="any"
+            required
+          >
+
+          <label for="unit">Select Input Unit</label>
+
+          <select id="unit" required>
+            <option value="C">Celsius (°C)</option>
+            <option value="F">Fahrenheit (°F)</option>
+            <option value="K">Kelvin (K)</option>
+          </select>
+
+          <button type="submit" class="btn convert-btn">
+            Convert Temperature →
+          </button>
+
+          <button type="button" id="reset-btn" class="reset-btn">
+            Reset Values
+          </button>
+
+          <p id="error-message" class="error-message" role="alert"></p>
+        </form>
+
+        <div class="results-area" aria-live="polite">
+          <div class="results-heading">
+            <h3>Your Results</h3>
+            <span class="live-dot"></span>
+          </div>
+
+          <article class="result-card">
+            <div class="result-icon">❄️</div>
+            <div class="result-info">
+              <span>Celsius</span>
+              <strong id="celsius-result">-- °C</strong>
+            </div>
+          </article>
+
+          <article class="result-card">
+            <div class="result-icon">☀️</div>
+            <div class="result-info">
+              <span>Fahrenheit</span>
+              <strong id="fahrenheit-result">-- °F</strong>
+            </div>
+          </article>
+
+          <article class="result-card">
+            <div class="result-icon">🌡️</div>
+            <div class="result-info">
+              <span>Kelvin</span>
+              <strong id="kelvin-result">-- K</strong>
+            </div>
+          </article>
+
+          <p class="result-note">
+            Results are calculated from your selected input unit.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Formula Cards -->
+    <section class="formula-section">
+      <div class="section-heading">
+        <span class="eyebrow">LEARN THE BASICS</span>
+        <h2>How It <span>Works.</span></h2>
+        <p>Temperature conversion formulas used by this tool.</p>
+      </div>
+
+      <div class="formula-grid">
+        <article class="formula-card">
+          <div class="formula-icon">°C</div>
+          <h3>Celsius</h3>
+          <p>The Celsius scale is commonly used in everyday life.</p>
+          <div class="formula">°F = (°C × 9/5) + 32</div>
+        </article>
+
+        <article class="formula-card">
+          <div class="formula-icon">°F</div>
+          <h3>Fahrenheit</h3>
+          <p>The Fahrenheit scale is used for weather and temperature in some countries.</p>
+          <div class="formula">°C = (°F − 32) × 5/9</div>
+        </article>
+
+        <article class="formula-card">
+          <div class="formula-icon">K</div>
+          <h3>Kelvin</h3>
+          <p>The Kelvin scale is commonly used in scientific calculations.</p>
+          <div class="formula">K = °C + 273.15</div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 Tempora | Temperature Converter</p>
+    <a href="#converter">Back to Converter ↑</a>
+  </footer>
+
+</body>
+</html>
